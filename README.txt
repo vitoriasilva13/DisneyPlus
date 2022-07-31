@@ -4,4 +4,4 @@ LINKS ÚTEIS PARA O DESENVOLVIMENTO:
     slick carousel utilizado no projeto
 
 - https://developers.themoviedb.org/3/getting-started/introduction
-    api da database de filmes e séries utilizada no projeto
+    documentação da api da database de filmes e séries utilizada no projeto
