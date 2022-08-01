@@ -4,12 +4,12 @@ var api_url_base_image = "https://image.tmdb.org/t/p/";
 var api_language = "&language=pt-BR";
 
 $(document).ready(function(){
-    var api = getInfo("movie", "now_playing", null, true);
-    $.getJSON(api, function (data) {
+    var api_main_slick = getInfo("movie", "now_playing", null, true);
+    $.getJSON(api_main_slick, function (data) {
         $.each(data.results, function (i, item) {
             var caminho_imagem = "";
             $("<div class='lancamento' style='background-image: url(" + getImage(780, item.backdrop_path) + ")'>" 
-                + "<img src='https://image.tmdb.org/t/p/original/" + caminho_imagem + "'></img>" + item.title + "</div>").appendTo(".slick-main-lancamentos");
+                /*+ "<img src='https://image.tmdb.org/t/p/original/" + caminho_imagem + "'></img>"*/ + item.title + "</div>").appendTo(".slick-main-lancamentos");
             return i < 5;
         })
         $('.slick-main-lancamentos').slick({
@@ -19,6 +19,21 @@ $(document).ready(function(){
             autoplay: true,
             autoplaySpeed: 2500,
             arrows: false
+        });
+    })
+    var api_slick_popular = getInfo("movie", "popular", null, true);
+    $.getJSON(api_slick_popular, function (data) {
+        $.each(data.results, function (i, item) {
+            var caminho_imagem = "";
+            $("<div class='lancamento' style='background-image: url(" + getImage(780, item.backdrop_path) + ")'>" 
+                /*+ "<img src='https://image.tmdb.org/t/p/original/" + caminho_imagem + "'></img>"*/ + item.title + "</div>").appendTo(".slick-popular");
+            return i < 20;
+        })
+        $('.slick-popular').slick({
+            centerMode: true,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            arrows: true
         });
     })
 })

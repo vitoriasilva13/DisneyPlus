@@ -58,6 +58,10 @@ nav {
 .container {
     width: 100vw;
     margin: 2rem auto;
+    .titulo-secao {
+        font-weight: bold;
+        color: white;
+    }
     .slick-main-lancamentos {
         display: flex;
         .lancamento {
@@ -68,6 +72,17 @@ nav {
             background-repeat: no-repeat;
             background-position-y: center;
             background-position-x: right;
+        }
+    }
+    .slick-popular {
+        display: flex;
+        .lancamento {
+            height: 20vh;
+            background-color: white;
+            border-radius: 0.5rem;
+            margin: 0 0.5rem;
+            background-size: cover;
+            color: white;
         }
     }
 }
