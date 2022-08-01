@@ -76,6 +76,7 @@ nav {
     }
     .slick-popular {
         display: flex;
+        position: relative;
         .lancamento {
             height: 20vh;
             background-color: white;
@@ -83,6 +84,26 @@ nav {
             margin: 0 0.5rem;
             background-size: cover;
             color: white;
+        }
+        button.slick-arrow {
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            top: 0;
+            z-index: 100;
+            height: 100%;
+            &.slick-next {
+                right: 0;
+            }
+            &.slick-prev {
+                left: 0;
+            }
+            &:hover {
+                background-color: rgba($color: #fff, $alpha: 0.5);
+            }
+            .i {
+                padding: 1rem;
+            }
         }
     }
 }

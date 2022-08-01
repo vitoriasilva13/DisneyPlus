@@ -33,7 +33,9 @@ $(document).ready(function(){
             centerMode: true,
             slidesToShow: 5,
             slidesToScroll: 1,
-            arrows: true
+            arrows: true,
+            prevArrow: '<button type="button" class="slick-arrow slick-prev"><i class="fa-solid fa-arrow-left i"></i></button>',
+            nextArrow: '<button type="button" class="slick-arrow slick-next"><i class="fa-solid fa-arrow-right i"></i></button>'
         });
     })
 })
