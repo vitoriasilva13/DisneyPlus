@@ -61,6 +61,7 @@ nav .perfil {
   display: flex;
 }
 .container .slick-main-lancamentos .lancamento {
+  position: relative;
   height: 45vh;
   background-color: white;
   border-radius: 0.5rem;
@@ -68,6 +69,23 @@ nav .perfil {
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: right;
+}
+.container .slick-main-lancamentos .lancamento .paginacao {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  list-style: none;
+  margin: 0.5rem 4rem;
+}
+.container .slick-main-lancamentos .lancamento .paginacao li button {
+  border-radius: 5px;
+  height: 0.8rem;
+  width: 0.8rem;
+  font-size: 0;
+  margin: 0 0.2rem;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .container .slick-popular {
   display: flex;

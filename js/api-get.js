@@ -18,7 +18,10 @@ $(document).ready(function(){
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 2500,
-            arrows: false
+            arrows: false,
+            dots: true,
+            dotsClass: 'paginacao',
+            appendDots: '.lancamento'
         });
     })
     var api_slick_popular = getInfo("movie", "popular", null, true);
@@ -35,7 +38,21 @@ $(document).ready(function(){
             slidesToScroll: 1,
             arrows: true,
             prevArrow: '<button type="button" class="slick-arrow slick-prev"><i class="fa-solid fa-arrow-left i"></i></button>',
-            nextArrow: '<button type="button" class="slick-arrow slick-next"><i class="fa-solid fa-arrow-right i"></i></button>'
+            nextArrow: '<button type="button" class="slick-arrow slick-next"><i class="fa-solid fa-arrow-right i"></i></button>',
+            responsive: [
+                {
+                    breakpoint: 600,
+                    settings: {
+                      slidesToShow: 3
+                    }
+                  },
+                  {
+                    breakpoint: 480,
+                    settings: {
+                      slidesToShow: 2
+                    }
+                }
+            ]
         });
     })
 })

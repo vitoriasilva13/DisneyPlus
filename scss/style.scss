@@ -65,6 +65,7 @@ nav {
     .slick-main-lancamentos {
         display: flex;
         .lancamento {
+            position: relative;
             height: 45vh;
             background-color: white;
             border-radius: 0.5rem;
@@ -72,6 +73,23 @@ nav {
             background-repeat: no-repeat;
             background-position-y: center;
             background-position-x: right;
+            .paginacao {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                display: flex;
+                list-style: none;
+                margin: 0.5rem 4rem;
+                li button {
+                    border-radius: 5px;
+                    height: 0.8rem;
+                    width: 0.8rem;
+                    font-size: 0;
+                    margin: 0 0.2rem;
+                    border: 0;
+                    background-color: rgba($color: #000, $alpha: 0.5);
+                }
+            }
         }
     }
     .slick-popular {
