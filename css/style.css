@@ -50,8 +50,8 @@ nav .perfil {
 }
 
 .container {
-  width: 100vw;
-  margin: 2rem auto;
+  width: 100%;
+  margin: 2rem 0;
 }
 .container .titulo-secao {
   font-weight: bold;
@@ -118,4 +118,4 @@ nav .perfil {
 }
 .container .slick-popular button.slick-arrow .i {
   padding: 1rem;
-}
+}/*# sourceMappingURL=style.css.map */
