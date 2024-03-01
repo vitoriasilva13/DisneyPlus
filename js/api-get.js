@@ -1,16 +1,6 @@
-var api_key = "?api_key=f93d84a232e65befaa774a77d5f12ba9";
 var api_url_base = "https://api.themoviedb.org/3/";
 var api_url_base_image = "https://image.tmdb.org/t/p/";
 var api_language = "en-US";
-
-const options = {
-  method: "GET",
-  headers: {
-    accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmOTNkODRhMjMyZTY1YmVmYWE3NzRhNzdkNWYxMmJhOSIsInN1YiI6IjYyZTEyODliNWNhNzA0MjYxYWVmZGQxOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.AfQeYfMCf2wYdaqE7fGmOQKkyGwCvzcvuMDIUitvAc0",
-  },
-};
 
 $(document).ready(function () {
   var api_main_slick = getInfo("movie", "now_playing", null, true);
