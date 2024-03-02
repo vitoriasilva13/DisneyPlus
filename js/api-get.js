@@ -1,7 +1,3 @@
-var api_url_base = "https://api.themoviedb.org/3/";
-var api_url_base_image = "https://image.tmdb.org/t/p/";
-var api_language = "en-US";
-
 $(document).ready(function () {
   var api_main_slick = getInfo("movie", "now_playing", null, true);
   console.log(api_main_slick);
@@ -14,7 +10,7 @@ $(document).ready(function () {
           "<div class='lancamento' style='background-image: url(" +
             getImage(780, item.backdrop_path) +
             ")'>" +
-            /*+ "<img src='https://image.tmdb.org/t/p/original/" + caminho_imagem + "'></img>"*/ item.title +
+            item.title +
             "</div>"
         ).appendTo(".slick-main-lancamentos");
         return i < 5;
@@ -40,11 +36,14 @@ $(document).ready(function () {
       $.each(data.results, function (i, item) {
         var caminho_imagem = "";
         $(
-          "<div class='lancamento' style='background-image: url(" +
+          "<form method='get' action='pages/movie-details.html'><div class='lancamento' style='background-image: url(" +
             getImage(780, item.backdrop_path) +
             ")'>" +
-            /*+ "<img src='https://image.tmdb.org/t/p/original/" + caminho_imagem + "'></img>"*/ item.title +
-            "</div>"
+            "<input type='hidden' name='id' value='" +
+            item.id +
+            "'/><button type='submit'>" +
+            item.title +
+            "</button></div></form>"
         ).appendTo(".slick-popular");
         return i < 20;
       });
@@ -75,15 +74,3 @@ $(document).ready(function () {
     })
     .catch((err) => console.error(err));
 });
-
-function getInfo(type, subcategory, item_id, language) {
-  return `${api_url_base}${type}/${subcategory}${
-    item_id ? `/${item_id}` + "/" : ""
-  }${language ? `?language=${api_language}` : ""}&page=1`;
-}
-
-function getImage(width_size, img_path) {
-  return `${api_url_base_image}/${
-    width_size ? "w" + width_size : original
-  }/${img_path}`;
-}
