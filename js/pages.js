@@ -5,7 +5,9 @@ $(document).ready(function () {
     .then((data) => data.json())
     .then((data) => {
       document.querySelectorAll(".main-picture")[0].style.background =
-        "url(" + getImage(780, data.backdrop_path) + ") no-repeat";
+        "url(" +
+        getImage(1280, data.backdrop_path) +
+        ") no-repeat center/cover";
       document.querySelectorAll(".poster")[0].src = getImage(
         null,
         data.poster_path
