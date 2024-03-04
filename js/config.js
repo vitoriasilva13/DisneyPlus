@@ -1,4 +1,7 @@
-var api_key = getCookie("bearer") != "" ? getCookie("bearer") : ""; //key da api da sua aplicação no TMDB
+var api_key =
+  getCookie("bearer") != ""
+    ? getCookie("bearer")
+    : "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmOTNkODRhMjMyZTY1YmVmYWE3NzRhNzdkNWYxMmJhOSIsInN1YiI6IjYyZTEyODliNWNhNzA0MjYxYWVmZGQxOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.AfQeYfMCf2wYdaqE7fGmOQKkyGwCvzcvuMDIUitvAc0"; //key da api da sua aplicação no TMDB
 var api_url_base = "https://api.themoviedb.org/3/";
 var api_url_base_image = "https://image.tmdb.org/t/p/";
 var api_language = "en-US";
@@ -35,10 +38,10 @@ function getCrew(item_id) {
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i <ca.length; i++) {
+  let ca = decodedCookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
     let c = ca[i];
-    while (c.charAt(0) == ' ') {
+    while (c.charAt(0) == " ") {
       c = c.substring(1);
     }
     if (c.indexOf(name) == 0) {

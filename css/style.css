@@ -42,6 +42,10 @@ nav .nav-opcoes ul li {
   display: inline;
   font-size: 10pt;
 }
+nav .nav-opcoes ul li a {
+  color: white;
+  text-decoration: none;
+}
 nav .nav-opcoes ul li svg {
   padding-right: 0.75rem;
 }
