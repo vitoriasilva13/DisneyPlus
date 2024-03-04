@@ -1,4 +1,4 @@
-var api_key = document.cookie ? document.cookie : ""; //key da api da sua aplicação no TMDB
+var api_key = document.cookie != "" ? document.cookie : ""; //key da api da sua aplicação no TMDB
 var api_url_base = "https://api.themoviedb.org/3/";
 var api_url_base_image = "https://image.tmdb.org/t/p/";
 var api_language = "en-US";
